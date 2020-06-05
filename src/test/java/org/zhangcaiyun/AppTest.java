@@ -1,11 +1,9 @@
 package org.zhangcaiyun;
 
-import static org.junit.Assert.assertTrue;
+import org.zhangcaiyun.vo.School;
 
 import com.alibaba.fastjson.JSON;
 import com.caiyun.create.util.CreateObjectUtil;
-import org.junit.Test;
-import org.zhangcaiyun.vo.School;
 
 /**
  * Unit test for simple App.

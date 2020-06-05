@@ -15,13 +15,15 @@ public class CreateObjectUtil {
         jvm_version = Integer.parseInt(versionNum);
     }
 
-    public static <T> T createObject(Class<T> clazz) {
+    @SuppressWarnings("deprecation")
+	public static <T> T createObject(Class<T> clazz) {
 
         Field[] fields = clazz.getDeclaredFields();
 
         T obj = null;
         try {
 
+        	// 为了支持java1.8 及以下版本
             if (jvm_version < 9) {
                 obj = clazz.newInstance();
             } else {

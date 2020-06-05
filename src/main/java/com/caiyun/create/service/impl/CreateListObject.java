@@ -7,11 +7,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CreateListObject implements CreateObject {
-    @Override
+	
+	@Override
     public Object create(String type) {
         String classObj = type.substring(type.indexOf("<") + 1,type.indexOf(">"));
         try {
-            Class clazz = Class.forName(classObj);
+            Class<?> clazz = Class.forName(classObj);
             List<Object> list = new ArrayList<>();
             for(int i = 0; i < 2; i++){
                 Object obj = CreateObjectUtil.createObject(clazz);
