@@ -20,6 +20,6 @@ public class CreateStringObject implements CreateObject {
 
     @Override
     public Object create() {
-        return "null";
+        return create("");
     }
 }

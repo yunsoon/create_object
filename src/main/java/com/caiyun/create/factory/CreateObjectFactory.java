@@ -1,10 +1,7 @@
 package com.caiyun.create.factory;
 
 import com.caiyun.create.service.CreateObject;
-import com.caiyun.create.service.impl.CreateIntegerObject;
-import com.caiyun.create.service.impl.CreateListObject;
-import com.caiyun.create.service.impl.CreateLongObject;
-import com.caiyun.create.service.impl.CreateStringObject;
+import com.caiyun.create.service.impl.*;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -17,10 +14,12 @@ public class CreateObjectFactory {
         createMap.put("java.lang.String",new CreateStringObject());
         createMap.put("java.lang.Integer",new CreateIntegerObject());
         createMap.put("java.util.List",new CreateListObject());
+        createMap.put("java.lang.Float",new CreateFloatObject());
 
         typeMap.put("int","java.lang.Integer");
         typeMap.put("long","java.lang.Long");
         typeMap.put("double","java.lang.Double");
+        typeMap.put("float","java.lang.Float");
     }
 
 
